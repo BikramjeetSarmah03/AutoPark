@@ -1,0 +1,13 @@
+{
+  "name": "auto_park",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AutoPark a parking application",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.7.2"
+  }
+}
