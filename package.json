@@ -3,11 +3,25 @@
   "version": "1.0.0",
   "private": true,
   "description": "AutoPark a parking application",
-  "scripts": {},
+  "scripts": {
+    "format": "prettier  \"{apps,libs}/**/*.{ts,tsx,js,json}\" --ignore-path .gitignore",
+    "format:check": "pnpm format --check",
+    "format:write": "pnpm format --write",
+    "tsc": "pnpm tsc",
+    "lint": "pnpm lint",
+    "build": "pnpm build",
+    "validate": "pnpm format:write",
+    "validate:all": "pnpm format:write && pnpm tsc && pnpm lint && pnpm build",
+    "prepare": "husky",
+    "cloc": "npx cloc --exclude-dir=node_modules,dist,build,pnpm.lock,package.json,generated.tsx,.next,.nx ."
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.11",
+    "prettier": "^3.0.0",
     "typescript": "^5.7.2"
   }
 }
